@@ -1,0 +1,60 @@
+{
+	"info": {
+		"_postman_id": "34213a51-e2d2-421c-af70-5a4fb298e2cd",
+		"name": "MR.MandoobTask",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4273177"
+	},
+	"item": [
+		{
+			"name": "Api automation testing",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response has a JSON body\", function () {\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"\r",
+							"pm.test(\"API response contains the expected fields\", () => {\r",
+							"  const response = pm.response.json();\r",
+							"\r",
+							"  // the line below checks value of the name field is fact (string).\r",
+							"  pm.expect(response).to.have.property(\"fact\");\r",
+							"\r",
+							"// the line below checks value of the name field is length (string)\r",
+							"  pm.expect(response).to.have.property(\"length\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://catfact.ninja/fact",
+					"protocol": "https",
+					"host": [
+						"catfact",
+						"ninja"
+					],
+					"path": [
+						"fact"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

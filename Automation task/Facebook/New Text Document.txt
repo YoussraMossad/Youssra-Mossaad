@@ -1,0 +1,6 @@
+Login and Register pages for Facebook automation Testing using Data Driven Framework
+ 
+-Data Driven Testing Framework is used to separate the test script from the test data.
+which i can test the same script with multiple sets of data.
+ 
+-i read data for users from excel sheet file 

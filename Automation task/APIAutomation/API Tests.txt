@@ -1,0 +1,15 @@
+**DELIVERABLES**
+
+API :
+https://catfact.ninja/fact
+
+1. A list of test cases proposed for automation:
+
+    1.verify Status code of response is 200
+    2.Response has a JSON body
+    3.checks name field is "fact" is retrieve successfully in reponse json body
+    4.checks name field is "length" is retrieve successfully in reponse json body
+    5.Response time is less than 500ms
+
+
+2.Tool :Postman
